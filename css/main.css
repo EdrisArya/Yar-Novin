@@ -2,5 +2,148 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  direction: rtl;
+}
+
+button, input[type="submit"], input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container > * {
+  width: 80%;
+}
+
+.btn-fill {
+  color: white;
+  padding: 15px 25px;
+  background: #01c1d0;
+  background: linear-gradient(90deg, #01c1d0 0%, #23cf5f 100%);
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: .3s;
+}
+
+.btn-fill:hover {
+  color: black;
+  background: transparent;
+  border: 1px solid #99999b;
+  border-radius: 10px;
+}
+
+.btn-border {
+  color: black;
+  padding: 15px 25px;
+  background: transparent;
+  border: 1px solid #99999b;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+.btn-border:hover {
+  color: white;
+  background: #01c1d0;
+  background: linear-gradient(135deg, #01c1d0 0%, #23cf5f 100%);
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+header.header {
+  width: 100%;
+  height: 90vh;
+}
+
+header.header .menu-container {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding: 0 0 20px 0;
+}
+
+header.header .menu-container nav.menu {
+  width: 80%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+header.header .menu-container nav.menu .logo {
+  height: 100%;
+  padding-top: 2px;
+}
+
+header.header .menu-container nav.menu .logo img {
+  height: 100%;
+}
+
+header.header .menu-container nav.menu ul {
+  display: flex;
+  list-style-type: none;
+}
+
+header.header .menu-container nav.menu ul li {
+  padding: 20px 20px 0 20px;
+  position: relative;
+}
+
+header.header .menu-container nav.menu ul li a {
+  color: black;
+  text-decoration: none;
+  transition: all .5s;
+}
+
+header.header .menu-container nav.menu ul li a:hover {
+  color: #007aff;
+}
+
+header.header .menu-container nav.menu ul li.active {
+  border-top: 2px solid #007aff;
+}
+
+header.header .menu-container nav.menu ul li.active a {
+  color: #007aff;
+}
+
+header.header .main-picture {
+  height: 90%;
+  background-image: url("../images/five-man.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header.header .main-picture .content {
+  background-color: rgba(27, 0, 102, 0.233);
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+header.header .main-picture .content > * {
+  padding: 50px;
+}
+
+header.header .main-picture .content .btns .btn-fill:hover {
+  color: white !important;
+}
+
+header.header .main-picture .content .btns .btn-border {
+  color: white !important;
 }
 /*# sourceMappingURL=main.css.map */
