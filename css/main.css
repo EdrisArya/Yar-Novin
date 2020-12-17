@@ -15,6 +15,10 @@ button, input[type="submit"], input[type="reset"] {
   outline: inherit;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   width: 100%;
   display: flex;
@@ -59,6 +63,48 @@ button, input[type="submit"], input[type="reset"] {
   border: 1px solid transparent;
 }
 
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropdown-container {
+  height: 0;
+  overflow: hidden;
+  width: 200px;
+  position: absolute;
+  bottom: -100px;
+  transition: .5s;
+}
+
+.dropdown:hover .dropdown-container {
+  height: auto;
+  bottom: auto;
+  opacity: 1;
+  z-index: 2;
+  background-color: white;
+  box-shadow: 1px 1px 10px white;
+  border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-container li {
+  padding: 10px 20px;
+  transition: .5s;
+  border-right: 3px solid transparent;
+}
+
+.dropdown:hover .dropdown-container li a {
+  color: black;
+  transition: .5s;
+}
+
+.dropdown:hover .dropdown-container li a:hover {
+  color: #007aff;
+}
+
+.dropdown:hover .dropdown-container li:hover {
+  border-right: 3px solid #007aff;
+}
+
 header.header {
   width: 100%;
   height: 90vh;
@@ -82,41 +128,58 @@ header.header .menu-container nav.menu {
   align-items: stretch;
 }
 
-header.header .menu-container nav.menu .logo {
+header.header .menu-container nav.menu > .logo {
   height: 100%;
   padding-top: 2px;
 }
 
-header.header .menu-container nav.menu .logo img {
+header.header .menu-container nav.menu > .logo > img {
   height: 100%;
 }
 
-header.header .menu-container nav.menu ul {
+header.header .menu-container nav.menu > ul {
   display: flex;
   list-style-type: none;
 }
 
-header.header .menu-container nav.menu ul li {
+header.header .menu-container nav.menu > ul > li {
   padding: 20px 20px 0 20px;
-  position: relative;
 }
 
-header.header .menu-container nav.menu ul li a {
+header.header .menu-container nav.menu > ul > li > a {
   color: black;
   text-decoration: none;
   transition: all .5s;
 }
 
-header.header .menu-container nav.menu ul li a:hover {
+header.header .menu-container nav.menu > ul > li > a:hover {
   color: #007aff;
 }
 
-header.header .menu-container nav.menu ul li.active {
+header.header .menu-container nav.menu > ul > li.active {
   border-top: 2px solid #007aff;
 }
 
-header.header .menu-container nav.menu ul li.active a {
+header.header .menu-container nav.menu > ul > li.active > a {
   color: #007aff;
+}
+
+header.header .menu-container nav.menu > ul > .dropdown {
+  padding: 20px 20px 0 20px;
+}
+
+header.header .menu-container nav.menu > ul > .dropdown > .dropdown-tag {
+  color: black;
+}
+
+header.header .menu-container nav.menu > ul > .dropdown > .dropdown-tag:hover {
+  color: #007aff;
+}
+
+header.header .menu-container nav.menu > ul #search-box {
+  width: 200px;
+  height: 50px;
+  box-shadow: 1px 1px 5px #007aff;
 }
 
 header.header .main-picture {
