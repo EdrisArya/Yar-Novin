@@ -69,3 +69,16 @@ $c-gray:#99999b;
         }
     }
 }
+.fill-search{
+    border-radius:50px;
+    padding: 10px;
+    border: 2px solid transparent;
+    i{
+        color:$c-dark-blue
+    }
+    background-color: rgb(233, 233, 253);
+    &:hover{
+        background-color: transparent;
+        border: 2px solid $c-dark-blue;
+    }
+}
