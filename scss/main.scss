@@ -161,7 +161,7 @@ header.header{
             left: 0;
             top: -3vh;
             width: 40%;
-            background-color: $c-grayi;
+            background-color: $c-my-gray;
             >*{
                 padding: 50px;
             }
@@ -203,5 +203,86 @@ header.header{
             }
         }
         
+    }
+}
+//this is services section styles
+.services{
+    @extend .container;
+    background-color: $c-my-gray;
+    margin-top:50px;
+    .content{
+        padding: 20px 0;
+        .top-info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom:20px ;
+            .header{
+                font-weight: bolder;
+                font-size: 2.5em;
+            }
+            .text{
+                font-weight: bold;
+                font-size: 1.5em;
+            }
+        }
+        .carts{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+            .item{
+                background-color: white;
+                border: 2px dashed black;
+                overflow: hidden;
+                position: relative;
+                cursor: default;
+                transition: .5s;
+                .number{
+                    width: 100%;
+                    display: flex;
+                    justify-content: end;
+                    position: absolute;
+                    right: -50px;
+                    top: -30px;
+                    span{
+                        background-color: white;
+                        padding: 40px 55px;
+                        margin-right: 5px;
+                        font-size: 2em;
+                        color: $c-my-gray;
+                        border-radius: 90%;
+                        transition: .5s;
+                    }
+                }
+                .icon{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        width: 20%;
+                    }
+                }
+                .header{
+                    @extend .container;
+                    font-size: 2em;
+                    padding: 5px 0;
+                    text-align: center;
+                }
+                .text{
+                    @extend .container;
+                    font-size: 1.2em;
+                    padding: 5px 0;
+                    text-align: center;
+                }
+
+                &:hover{
+                    .number>span{
+                        background-color: $c-dark-blue;
+                        color: white;
+                    }
+                    border: 2px solid $c-dark-blue;
+                }
+            }
+        }
     }
 }

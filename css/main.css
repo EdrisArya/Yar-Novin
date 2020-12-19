@@ -19,13 +19,13 @@ a {
   text-decoration: none;
 }
 
-.container, .our-attributes, .about-us {
+.container, .our-attributes, .about-us, .services, .services .content .carts .item .header, .services .content .carts .item .text {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.container > *, .our-attributes > *, .about-us > * {
+.container > *, .our-attributes > *, .about-us > *, .services > *, .services .content .carts .item .header > *, .services .content .carts .item .text > * {
   width: 80%;
 }
 
@@ -358,5 +358,96 @@ header.header .main-picture .content .btns .btn-border {
 .about-us .content .image img {
   width: 100%;
   height: auto;
+}
+
+.services {
+  background-color: #eeeeee;
+  margin-top: 50px;
+}
+
+.services .content {
+  padding: 20px 0;
+}
+
+.services .content .top-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.services .content .top-info .header {
+  font-weight: bolder;
+  font-size: 2.5em;
+}
+
+.services .content .top-info .text {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.services .content .carts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.services .content .carts .item {
+  background-color: white;
+  border: 2px dashed black;
+  overflow: hidden;
+  position: relative;
+  cursor: default;
+  transition: .5s;
+}
+
+.services .content .carts .item .number {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  right: -50px;
+  top: -30px;
+}
+
+.services .content .carts .item .number span {
+  background-color: white;
+  padding: 40px 55px;
+  margin-right: 5px;
+  font-size: 2em;
+  color: #eeeeee;
+  border-radius: 90%;
+  transition: .5s;
+}
+
+.services .content .carts .item .icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.services .content .carts .item .icon img {
+  width: 20%;
+}
+
+.services .content .carts .item .header {
+  font-size: 2em;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.services .content .carts .item .text {
+  font-size: 1.2em;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.services .content .carts .item:hover {
+  border: 2px solid #007aff;
+}
+
+.services .content .carts .item:hover .number > span {
+  background-color: #007aff;
+  color: white;
 }
 /*# sourceMappingURL=main.css.map */
