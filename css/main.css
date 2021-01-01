@@ -5,6 +5,14 @@
   direction: rtl;
 }
 
+::-webkit-scrollbar {
+  background-color: #eeeeee;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #01c1d0;
+}
+
 button, input[type="submit"], input[type="reset"] {
   background: none;
   color: inherit;
@@ -19,13 +27,13 @@ a {
   text-decoration: none;
 }
 
-.container, .our-attributes, .about-us, .services, .services .content .carts .item .header, .services .content .carts .item .text {
+.container, .our-attributes, .about-us, .services, .services .content .carts .item .header, .services .content .carts .item .text, .panels-link .section-info, .panels-link .boxes {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.container > *, .our-attributes > *, .about-us > *, .services > *, .services .content .carts .item .header > *, .services .content .carts .item .text > * {
+.container > *, .our-attributes > *, .about-us > *, .services > *, .services .content .carts .item .header > *, .services .content .carts .item .text > *, .panels-link .section-info > *, .panels-link .boxes > * {
   width: 80%;
 }
 
@@ -449,5 +457,74 @@ header.header .main-picture .content .btns .btn-border {
 .services .content .carts .item:hover .number > span {
   background-color: #007aff;
   color: white;
+}
+
+.panels-link {
+  margin-top: 50px;
+}
+
+.panels-link .section-info {
+  margin: 20px 0;
+}
+
+.panels-link .section-info p {
+  font-size: 1.5em;
+}
+
+.panels-link .boxes .content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 20px;
+}
+
+.panels-link .boxes .content .box {
+  border: 2px solid #01c1d0;
+  border-radius: 25px;
+}
+
+.panels-link .boxes .content .box .logo {
+  padding: 10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #01c1d0;
+}
+
+.panels-link .boxes .content .box .logo img {
+  width: 20%;
+}
+
+.panels-link .boxes .content .box header {
+  padding: 15px;
+}
+
+.panels-link .boxes .content .box header h3 {
+  font-size: 2em;
+}
+
+.panels-link .boxes .content .box .text {
+  padding: 15px;
+}
+
+.panels-link .boxes .content .box .text p {
+  font-size: 1.3em;
+}
+
+.panels-link .boxes .content .box .btn-container {
+  padding: 15px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.panels-link .boxes .content .box .btn-container button {
+  font-size: 1.2em;
+}
+
+.panels-link .boxes .content .box .btn-container button:hover {
+  font-size: 1.2em;
+  color: #01c1d0;
+  border: 1px solid #01c1d0;
 }
 /*# sourceMappingURL=main.css.map */

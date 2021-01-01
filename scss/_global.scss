@@ -4,6 +4,13 @@
     box-sizing: border-box;
     direction: rtl;
 }
+::-webkit-scrollbar{
+    background-color: #eeeeee;
+    // width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #01c1d0;
+}
 button, input[type="submit"], input[type="reset"] {
 	background: none;
 	color: inherit;
