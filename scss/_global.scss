@@ -11,7 +11,7 @@
 ::-webkit-scrollbar-thumb{
     background-color: #01c1d0;
 }
-button, input[type="submit"], input[type="reset"] {
+button, input[type="submit"], input[type="reset"],input[type="text"], inpur[type="text"]:focus, textarea, textarea:focus {
 	background: none;
 	color: inherit;
 	border: none;

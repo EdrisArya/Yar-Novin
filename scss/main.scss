@@ -349,3 +349,102 @@ header.header{
     }
 
 }
+//contact-us section styles
+.contact-us{
+    @extend .container;
+    margin-top: 50px;
+    position: relative;
+    // width: 100%;
+    height: 80vh;
+    background-color: $c-dark-blue;
+    >.content{
+        header{
+            text-align: center;
+            padding: 50px 0;
+            color: white;
+            h2{
+                font-size: 2.5em;
+            }
+            h3{
+                font-size: 1.2em
+            }
+        }
+        .cart{
+            position: absolute;
+            bottom:-20vh;
+            width: 80%;
+            background-color: white;
+            box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.26);
+            .content{
+                padding: 15px;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                .form{
+                    border: 5px solid black;
+                    padding: 15px;
+                    *{
+                        color: black;
+                    }
+                    header{
+                        margin-bottom: 20px;
+                        h3{
+                            font-size: 1.2em;
+                        }
+                        h2{
+                            font-size: 2em;
+                        }
+                    }
+                }
+                .image{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+//our work samples section
+.our-wrk-samples{
+    @extend .container;
+    margin-top: 27vh;
+    >.content{
+        header{
+            text-align: center;
+        }
+        nav#work-samples-button-table{
+            margin: 20px 0;
+            >ul{
+                display: flex;
+                justify-content: space-around;
+                list-style-type: none;
+                >li{
+                    padding: 10px;
+                    border-radius: 50px;
+                    font-weight: bold;
+                    >a{
+                        color: gray;
+                        transition: .5s;
+                    }
+                    &:hover{
+                        >a{
+                            color: $c-nav-worksamples-color;
+                        }
+                    }
+                }
+                >li.active{
+                    background-color: $c-sky-blue;
+                    transition: .5s;
+                    >a{
+                        color: white !important;
+                    }
+                    &:hover{
+                        background-color: $c-dark-blue;
+                    }
+                }
+            }
+        }
+    }
+}
